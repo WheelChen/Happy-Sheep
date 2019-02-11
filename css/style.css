@@ -1,0 +1,167 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+ol,ul{list-style:none;margin:0;padding:0;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+/* start editing from here */
+a{text-decoration:none;}
+.txt-rt{text-align:right;}/* text align right */
+.txt-lt{text-align:left;}/* text align left */
+.txt-center{text-align:center;}/* text align center */
+.float-rt{float:right;}/* float right */
+.float-lt{float:left;}/* float left */
+.clear{clear:both;}/* clear float */
+.pos-relative{position:relative;}/* Position Relative */
+.pos-absolute{position:absolute;}/* Position Absolute */
+.vertical-base{	vertical-align:baseline;}/* vertical align baseline */
+.vertical-top{ vertical-align:top;}/* vertical align top */
+.underline{	padding-bottom:5px;	border-bottom: 1px solid #eee; margin:0 0 20px 0;}/* Add 5px bottom padding and a underline */
+nav.vertical ul li{	display:block;}/* vertical menu */
+nav.horizontal ul li{ display: inline-block;}/* horizontal menu */
+img{max-width:100%;}
+/*end reset*/
+body {
+    background: url(../images/bg.png) no-repeat #fff;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	font-family: "Open Sans", arial, sans-serif;
+	font-weight: 300;
+}
+.wrap {
+	width: 80%;
+	margin: 0px auto;
+}
+.content{
+	min-height: 46em;
+	width: 100%;
+	height: 100%;
+}
+.content-grid {
+	text-align: center;
+}
+
+form {
+	/*margin-bottom: 0;*/
+	text-align: center;
+	/*width: 100%;*/
+}
+.enter{
+	/*margin: 0 auto;*/
+	position: relative; /*脱离文档流*/
+	margin-top: 10%;
+}
+
+.content-grid p img{
+	text-align: center;
+	z-index: -9999;			/*将图片置于最底层*/
+	margin-top: -11em;
+}
+.grid{
+	/*height: 500px;*/
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	margin-top: 1em;
+}
+.bottom{
+	position: absolute;
+	right: 5%;
+	bottom: 10%;
+	/*margin: 10% auto;*/
+}
+.bottom h3 {
+	font-family: 'Petit Formal Script', cursive;
+	color: #FFF;
+	display: block;
+	padding-bottom: 1em;
+	font-size: 1.6em;
+	padding-top: 1.5em;
+	font-weight: 600;
+	text-align: right;
+}
+#canvas{
+	border:1px solid #000;
+	display: none;
+	margin: 0 auto;
+	font-family: 'Petit Formal Script', cursive;
+}
+
+input {
+	background: #0d7ec4; /* Old browsers */
+	background: -moz-linear-gradient(top,  #0d7ec4 0%, #0a76b9 19%, #035b98 52%, #045a93 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0d7ec4), color-stop(19%,#0a76b9), color-stop(52%,#035b98), color-stop(100%,#045a93)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #0d7ec4 0%,#0a76b9 19%,#035b98 52%,#045a93 100%); /* Chrome10+,Safari5.1+ */
+}
+
+/*-----start-responsive-design------*/
+@media only screen and (max-width: 1280px) and (min-width: 1024px) {
+	.wrap{
+		width:95%;
+	}
+	
+	/*input[type="text"] {*/
+		/*width: 37%;*/
+	/*}*/
+	.content-grid p img{
+		margin-top: -8em;
+	}
+}
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+	.wrap{
+		width:95%;
+	}
+	.grid p {
+		margin-top: 1em;
+	}
+	.bottom h3 {
+		padding-top: 1.2em;
+		padding-bottom: 2em;
+	}
+	.content-grid p img{
+		margin-top: -8em;
+	}
+}
+@media only screen and (max-width: 768px) and (min-width: 480px) {
+	.wrap{
+		width:95%;
+	}
+	.content-grid p {
+		margin-top: 5.9em;
+	}
+	.grid p{
+		margin-top: 0em;
+	}
+	.grid p img {
+		width: 80%;
+		margin-top: 1em;
+	}
+	.bottom h3 {
+		font-size: 1em;
+		padding-top: 1.5em;
+		padding-bottom: 3em;
+	}
+	/*input[type="text"] {*/
+		/*font-size: 0.8em;*/
+		/*padding: 19.7px 13px;*/
+		/*width: 57%;*/
+	/*}*/
+	/*.btn {*/
+		/*padding: 25px 25px;*/
+		/*margin-left: -61px;*/
+		/*margin-top: 2.8px;*/
+	/*}*/
+	/*.footer p.a {*/
+		/*margin-top: 4em;*/
+		/*margin-bottom: 0em;*/
+	/*}*/
+	/*.footer p {*/
+		/*margin-bottom: 1em;*/
+	/*}*/
+	button span {
+		top: 18px;
+		left: 14px;
+	}
+}
